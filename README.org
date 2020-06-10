@@ -1,0 +1,9 @@
+* Dart Sass
+*** Build tagged image in local directory without cache
+#+BEGIN_SRC sh
+$ docker build --no-cache --build-arg DEBIAN_VERSION=stable-slim --build-arg DARTSASS_VERSION=1.26.8 --file Dockerfile . --tag image-name:latest
+#+END_SRC
+*** Create and run automatically container
+#+BEGIN_SRC sh
+$ docker run -it --rm --name container-name image-id 'dart /usr/src/dart-sass/bin/sass.dart'
+#+END_SRC
